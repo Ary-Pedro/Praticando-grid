@@ -1,7 +1,7 @@
 # Praticando-grid
 
 
-# *Saudações a todos👋🏼*
+## *Saudações a todos👋🏼*
 
 ## *Praticando como manipular uma grid-area*  📖 
 
