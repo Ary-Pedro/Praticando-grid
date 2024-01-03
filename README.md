@@ -7,4 +7,4 @@
 
 *saber definir onde os itens irão se horientar na tela.*
 
-###gri-area, flex-box.
+### Grid-area, Flex-box.
