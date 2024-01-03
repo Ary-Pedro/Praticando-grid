@@ -1,0 +1,308 @@
+ html {
+    height: 100%;
+    width: 100%;
+  }
+
+  body{
+    background-color: rgb(175, 128, 57);
+    overflow-x: hidden;
+  }
+
+#logo{
+  width: clamp(200px,0.5vw,350px);
+  height: clamp(200px,0.5vh,350px);
+}
+
+  #logoCat{
+    width: 100%;
+    object-fit:fill;
+    border-radius: 40%;
+    z-index: 1;
+    align-self:flex-start;
+  }
+
+#logoDog{
+  width: 0%;
+  object-fit:fill;
+  border-radius: 40%;
+  z-index: 2;
+  align-self:flex-start;
+}
+
+
+
+
+
+  video{
+  width:320px; 
+  height:240px;
+  background-color: rgb(0, 0, 0);
+  }
+
+
+.container {
+  display: grid; 
+  grid-auto-flow: column; 
+  grid-template-columns: 1% 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 1%; 
+  grid-template-rows: 0.5fr 0.3fr 1fr 0.3fr 1fr 1fr 1fr 0.5fr 100%; 
+  gap: 0px 10px; 
+  grid-template-areas: 
+    "tela tela tela tela tela tela tela"
+    "tela tela tela tela tela tela tela"
+    "tela tela tela tela tela tela tela"
+    "tela tela tela tela tela tela tela"
+    "tela tela tela tela tela tela tela"
+    "tela tela tela tela tela tela tela"
+    "tela tela tela tela tela tela tela"
+    "tela tela tela tela tela tela tela"
+    "tela tela tela tela tela tela tela"; 
+  width: 100%; 
+  height: 100%;
+}
+
+.tela {  display: grid;
+       grid-template-columns: 1% 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 1%; 
+       grid-template-rows: 1fr 0.3fr 1fr 0.3fr 1fr 1fr 1fr 0.5fr auto; 
+  gap: 0px 10px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "logo logo . . . . ."
+    "logo logo . . . . ."
+    ". . . mode . . ."
+    ". . . . . . ."
+    ". md1 md2 md3 md4 md5 ."
+    ". md6 md7 md8 md9 md10 ."
+    ". md11 md12 md13 md14 md15 ."
+    ". . . . . . ."
+    "foot foot foot foot foot foot foot";
+  grid-area: tela;
+}
+
+.logo { grid-area: logo; }
+
+.mode {
+  justify-self: center;
+  align-self:flex-start;
+  grid-area: mode;
+  
+}
+
+.md1 {
+  justify-self: center;
+  align-self: center;
+  grid-area: md1;
+  cursor: pointer;
+
+}
+
+.md2 {
+  justify-self: center;
+  align-self: center;
+  grid-area: md2;
+  cursor: pointer;
+}
+
+.md3 {
+  justify-self: center;
+  align-self: center;
+  grid-area: md3;
+  cursor: pointer;
+}
+
+.md4 {
+  justify-self: center;
+  align-self: center;
+  grid-area: md4;
+  cursor: pointer;
+}
+
+.md5 {
+  justify-self: center;
+  align-self: center;
+  grid-area: md5;
+  cursor: pointer;
+}
+
+.md6 {
+  justify-self: center;
+  align-self: center;
+  grid-area: md6;
+  cursor: pointer;
+}
+
+.md7 {
+  justify-self: center;
+  align-self: center;
+  grid-area: md7;
+  cursor: pointer;
+}
+
+.md8 {
+  justify-self: center;
+  align-self: center;
+  grid-area: md8;
+  cursor: pointer;
+
+}
+
+.md9 {
+  justify-self: center;
+  align-self: center;
+  grid-area: md9;
+  cursor: pointer;
+}
+
+.md10 {
+  justify-self: center;
+  align-self: center;
+  grid-area: md10;
+  cursor: pointer;
+}
+
+.md11 {
+  justify-self: center;
+  align-self: center;
+  grid-area: md11;
+  cursor: pointer;
+}
+
+.md12 {
+  justify-self: center;
+  align-self: center;
+  grid-area: md12;
+  cursor: pointer;
+}
+
+.md13 {
+  justify-self: center;
+  align-self: center;
+  grid-area: md13;
+  cursor: pointer;
+}
+
+.md14 {
+  justify-self: center;
+  align-self: center;
+  grid-area: md14;
+  cursor: pointer;
+}
+
+.md15 {
+  justify-self: center;
+  align-self: center;
+  grid-area: md15;
+  cursor: pointer;
+}
+
+.foot { grid-area: foot; 
+       background-color: rgb(120, 139, 217);
+}
+
+
+
+
+/*botão design*/
+
+  button,button::after {
+    padding: 10px 50px;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: transparent;
+    position: relative;
+  }
+
+  button::after {
+    --move1: inset(50% 50% 50% 50%);
+    --move2: inset(31% 0 40% 0);
+    --move3: inset(39% 0 15% 0);
+    --move4: inset(45% 0 40% 0);
+    --move5: inset(45% 0 6% 0);
+    --move6: inset(14% 0 61% 0);
+    clip-path: var(--move1);
+    content: 'Modo';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+  }
+
+  button:hover::after {
+    animation: glitch_4011 1s;
+    text-shadow: 10 10px 10px black;
+    animation-timing-function: steps(2, end);
+    text-shadow: -3px -3px 0px #1df2f0, 3px 3px 0px #E94BE8;
+    background-color: transparent;
+    border: 3px solid rgb(0, 255, 213);
+  }
+
+  button:hover {
+    text-shadow: -1px -1px 0px #1df2f0, 1px 1px 0px #E94BE8;
+  }
+
+  button:hover {
+    background-color: transparent;
+    border: 1px solid rgb(0, 255, 213);
+    box-shadow: 0px 10px 10px -10px rgb(0, 255, 213);
+  }
+
+  @keyframes glitch_4011 {
+    0% {
+      clip-path: var(--move1);
+      transform: translate(0px,-10px);
+    }
+
+    10% {
+      clip-path: var(--move2);
+      transform: translate(-10px,10px);
+    }
+
+    20% {
+      clip-path: var(--move3);
+      transform: translate(10px,0px);
+    }
+
+    30% {
+      clip-path: var(--move4);
+      transform: translate(-10px,10px);
+    }
+
+    40% {
+      clip-path: var(--move5);
+      transform: translate(10px,-10px);
+    }
+
+    50% {
+      clip-path: var(--move6);
+      transform: translate(-10px,10px);
+    }
+
+    60% {
+      clip-path: var(--move1);
+      transform: translate(10px,-10px);
+    }
+
+    70% {
+      clip-path: var(--move3);
+      transform: translate(-10px,10px);
+    }
+
+    80% {
+      clip-path: var(--move2);
+      transform: translate(10px,-10px);
+    }
+
+    90% {
+      clip-path: var(--move4);
+      transform: translate(-10px,10px);
+    }
+
+    100% {
+      clip-path: var(--move1);
+      transform: translate(0);
+    }
+  }
+
