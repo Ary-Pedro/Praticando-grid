@@ -14,6 +14,6 @@ cont++;
     document.getElementById("logoCat").style.width = "0%";
     document.getElementById("logoDog").style.width = "100%";
   }
-// text
+
 }
 btn.addEventListener('click',mudar)
